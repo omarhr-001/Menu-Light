@@ -40,11 +40,11 @@ export function MenuItem({ item, featured }: { item: MenuItemType; featured?: bo
   return (
     <div className={itemClasses}>
       <div className="item-inner">
-        *{item.image && (
-  <div className="item-image">
-    <img src={item.image} alt={item.name.en} />
-  </div>
-)}
+        {item.image && (
+          <div className="item-image">
+            <img src={item.image} alt={item.name.en} />
+          </div>
+        )}
         <div className="item-content">
           {item.badges && item.badges.length > 0 && (
             <div className="item-badges">
