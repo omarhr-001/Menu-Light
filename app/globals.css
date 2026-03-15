@@ -323,25 +323,45 @@ nav::-webkit-scrollbar {
   align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+  .item-inner {
+    gap: 20px;
+  }
+}
+
+.item-image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .item-image img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  border: 2px solid var(--gold-light);
+  background: linear-gradient(135deg, var(--gold-pale), var(--cream));
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .item-image img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 12px;
+    border: 2.5px solid var(--gold-light);
+    box-shadow: 0 6px 16px var(--shadow);
   }
 }
 
 .item-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(184, 150, 90, 0.25);
 }
 /* ---- MAIN ---- */
 main {
